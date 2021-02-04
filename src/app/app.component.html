@@ -1,0 +1,55 @@
+<div class="wrapper">
+
+  <div class="header">
+    <div class="in-header">
+      <div>
+        <i class="uil uil-video"></i>
+      </div>
+
+      <div class="title">
+        Reconocimiento facial <b>ANGULAR 2021</b>
+      </div>
+    </div>
+    <div>
+      <a href="https://github.com/leifermendez" target="_blank">
+        <i class="uil uil-github"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="block-main">
+    <div class="cam">
+      <app-video-player
+        [width]="dimensionVideo.width"
+        [height]="dimensionVideo.height"
+        [stream]="currentStream">
+      </app-video-player>
+    </div>
+
+    <div class="sidebar">
+      <div class="zone-body">
+        <div class="block">
+          <div><b>Estado de ánimo</b></div>
+          <div class="block-expression">
+            <div *ngFor="let exp of listExpressions">
+              <span>{{exp.name}}: </span><span class="value-number">{{exp.value | number}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="block">
+          <div><b>Puntos de referencia</b></div>
+          <div class="canvas-preview"></div>
+        </div>
+      </div>
+      <div class="zone-btn">
+        <ul class="list-btn">
+          <li *ngFor="let btn of [1,1,1]">
+            <i class="uil uil-emoji"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</div>

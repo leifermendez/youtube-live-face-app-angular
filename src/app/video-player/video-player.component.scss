@@ -1,0 +1,139 @@
+:host {
+  position: relative;
+  display: block;
+}
+
+.overlay-cam {
+  //background-image: url("../../assets/filters/overlay-face.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+.btn {
+  cursor: pointer;
+  color: white;
+  font-weight: 300;
+  font-size: 2.2rem;
+  background-color: #89c2d9;
+  width: 75px;
+  height: 75px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border: 0;
+  //box-shadow: 0 0px 80px rgba(0, 0, 0, 0.15);
+}
+
+.section-buttons {
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-content: space-around;
+}
+
+::ng-deep {
+  video, canvas {
+    width: 478px;
+    height: 360px;
+    object-fit: cover;
+    border: solid 0px transparent;
+  }
+
+  video {
+    //opacity: .3;
+    background-color: white;
+    border: solid 0px white;
+    display: block;
+    //border-radius: 1rem;
+    width: 478px;
+    //box-shadow: 0 0px 80px rgba(0, 0, 0, 0.15);
+  }
+
+  canvas {
+    top: 0;
+    position: absolute;
+  }
+}
+
+.btn-filter {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  z-index: 1;
+  padding: 2rem;
+
+  button {
+    cursor: pointer;
+    font-size: 1.4rem;
+    border: 0;
+    padding: .5rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 10rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    box-shadow: 0 0px 80px rgba(0, 0, 0, 0.17);
+
+  }
+}
+
+.filters {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .filter-eye {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: white;
+  }
+
+  .filter-image {
+    img {
+      width: 300px;
+      margin-left: -80px;
+      margin-top: 25px;
+    }
+
+  }
+
+  .filter-question {
+    font-size: 1.3rem;
+    width: 350px;
+    height: 80px;
+    padding: .5rem;
+    background-color: #FF0000;
+    border: solid 5px white;
+    margin-left: -5.5vw;
+    margin-top: -90px;
+    text-align: center;
+  }
+}
+
+ul {
+  position: absolute;
+  top: 0;
+  display: flex;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+
+  li {
+    padding: 0;
+    font-size: 4rem;
+  }
+}
